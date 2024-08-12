@@ -9,7 +9,7 @@ interface MessageProps {
 const Message = ({ content, isUserMessage }: MessageProps) => {
   return (
     <div
-      className={cn("chat my-3", {
+      className={cn("chat px-3 my-3", {
         "chat-start": !isUserMessage,
         "chat-end": isUserMessage,
       })}
@@ -18,12 +18,12 @@ const Message = ({ content, isUserMessage }: MessageProps) => {
         <div className="w-10 rounded-full">
           <img
             alt={isUserMessage ? "user" : "Website"}
-            src={isUserMessage ? "/user.jpg" : "/chatbot.jpg"}
+            src={isUserMessage ? "/user.jpg" : "/chatbot.png"}
           />
         </div>
       </div>
       <div
-        className={cn("chat-bubble text-justify", {
+        className={cn("chat-bubble text-sm text-justify ", {
           "chat-bubble-success": isUserMessage,
         })}
       >
