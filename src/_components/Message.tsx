@@ -18,6 +18,8 @@ const Message = ({ content, isUserMessage }: MessageProps) => {
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
           <Image 
+            width={50}
+            height={50}
             alt={isUserMessage ? "user" : "Website"}
             src={isUserMessage ? "/user.jpg" : "/chatbot.png"}
           />
