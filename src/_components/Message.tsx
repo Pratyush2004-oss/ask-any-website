@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React from "react";
 
 interface MessageProps {
@@ -16,7 +17,7 @@ const Message = ({ content, isUserMessage }: MessageProps) => {
     >
       <div className="chat-image avatar">
         <div className="w-10 rounded-full">
-          <img
+          <Image 
             alt={isUserMessage ? "user" : "Website"}
             src={isUserMessage ? "/user.jpg" : "/chatbot.png"}
           />
